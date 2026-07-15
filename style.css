@@ -1,0 +1,283 @@
+/* Styling System & Variables */
+:root {
+    --bg-color: #030712;
+    --card-bg: rgba(17, 24, 39, 0.6);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --text-primary: #f9fafb;
+    --text-secondary: #9ca3af;
+    --accent-color: #38bdf8;
+    --accent-hover: #0ea5e9;
+    --violet-accent: #a78bfa;
+}
+
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: var(--accent-color) var(--bg-color);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-primary);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 200vh; /* Needed to show off the particles */
+}
+
+/* --- 1. Background Animation System --- */
+.bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+    overflow: hidden;
+}
+
+/* Base Mesh Gradient */
+.mesh-gradient {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background-image: 
+        radial-gradient(at 10% 10%, rgba(56, 189, 248, 0.2) 0px, transparent 50%),
+        radial-gradient(at 90% 90%, rgba(139, 92, 246, 0.2) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(3, 7, 18, 1) 0px, transparent 80%);
+    filter: blur(80px);
+    animation: meshFlow 20s linear infinite;
+}
+
+@keyframes meshFlow {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(5%, 5%) rotate(5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* Particle Floating System */
+.particle-system {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.particle {
+    position: absolute;
+    bottom: -50px;
+    background: rgba(56, 189, 248, 0.15);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+    animation: particleFloat 15s linear infinite;
+    pointer-events: none;
+}
+
+/* Randomizing the particles using CSS variables (simulated randomness) */
+.particle:nth-child(1) { left: 10%; width: 30px; height: 30px; animation-duration: 18s; animation-delay: 0s; }
+.particle:nth-child(2) { left: 25%; width: 20px; height: 20px; animation-duration: 12s; animation-delay: 2s; background: rgba(167, 139, 250, 0.1); }
+.particle:nth-child(3) { left: 40%; width: 40px; height: 40px; animation-duration: 22s; animation-delay: 4s; }
+.particle:nth-child(4) { left: 55%; width: 25px; height: 25px; animation-duration: 14s; animation-delay: 1s; }
+.particle:nth-child(5) { left: 70%; width: 15px; height: 15px; animation-duration: 10s; animation-delay: 5s; }
+.particle:nth-child(6) { left: 85%; width: 35px; height: 35px; animation-duration: 20s; animation-delay: 3s; background: rgba(167, 139, 250, 0.1); }
+/* Repeat or add more children in HTML for denser particles */
+.particle:nth-child(7) { left: 15%; width: 20px; height: 20px; animation-duration: 16s; animation-delay: 8s; }
+.particle:nth-child(8) { left: 60%; width: 30px; height: 30px; animation-duration: 19s; animation-delay: 6s; }
+
+@keyframes particleFloat {
+    0% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-120vh) rotate(360deg) scale(0.5); opacity: 0; }
+}
+
+/* --- 2. Advanced Interactive Elements --- */
+/* Elements that follow the mouse: Uses JavaScript variables */
+.dynamic-glow {
+    position: relative;
+    border: 1px solid var(--card-border);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.dynamic-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(56, 189, 248, 0.1), transparent 40%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.dynamic-glow:hover {
+    transform: translateY(-4px);
+    border-color: rgba(56, 189, 248, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.dynamic-glow:hover::before {
+    opacity: 1;
+}
+
+/* Base Layout */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 8rem 2rem 4rem 2rem;
+}
+
+/* --- 3. Re-designed Modern Navbar --- */
+.navbar {
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 3rem);
+    max-width: 900px;
+    background: rgba(3, 7, 18, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.nav-content {
+    padding: 0.8rem 1.5rem 0.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    letter-spacing: -1px;
+}
+
+.nav-brand .dot { color: var(--accent-color); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover { color: var(--text-primary); }
+
+.nav-cta {
+    background: var(--text-primary);
+    color: var(--bg-color);
+    text-decoration: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+    background: var(--accent-color);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
+
+/* Standard Section Styling */
+.hero { text-align: center; padding: 4rem 0 6rem 0; }
+.hero h1 { font-size: 4rem; font-weight: 800; line-height: 1; margin-bottom: 1rem; letter-spacing: -2px; }
+.hero h2 { font-size: 1.6rem; color: var(--text-secondary); font-weight: 500; margin-bottom: 2rem; }
+.hero p { color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+.highlight { background: linear-gradient(to right, var(--accent-color), var(--violet-accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+.section-header { text-align: center; margin-bottom: 3rem; }
+.section-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent-color); font-weight: 700; }
+.divider { width: 40px; height: 3px; background: var(--accent-color); margin: 1rem auto 0 auto; border-radius: 2px; }
+
+/* Projects Grid & Cards */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--text-primary);
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    z-index: 2; /* To sit above particles */
+}
+
+.card-content { padding: 2rem; position: relative; z-index: 2; }
+.project-num { font-size: 0.8rem; font-weight: 800; color: var(--violet-accent); display: block; margin-bottom: 0.5rem; }
+.project-card h4 { font-size: 1.3rem; margin-bottom: 0.8rem; font-weight: 700; }
+.project-card p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; text-align: left; }
+.view-link { color: var(--accent-color); font-size: 0.9rem; font-weight: 700; transition: transform 0.3s ease; display: inline-block; }
+.project-card:hover .view-link { transform: translateX(5px); color: var(--text-primary); }
+
+/* Skills Section */
+.skills-container { display: flex; flex-direction: column; gap: 2rem; }
+.skill-category { background: var(--card-bg); border-radius: 16px; padding: 2rem; backdrop-filter: blur(5px); z-index: 2; }
+.skill-category h5 { font-size: 0.9rem; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 1.5rem; }
+.skills-grid { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.skill-tag { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--card-border); padding: 0.7rem 1.4rem; border-radius: 10px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; }
+.skill-tag:hover { background: rgba(56, 189, 248, 0.1); border-color: var(--accent-color); color: var(--accent-color); }
+
+/* Social/Connect Button */
+.links-section { text-align: center; margin-bottom: 4rem; }
+.social-links { display: flex; justify-content: center; margin-top: 2rem; }
+.social-btn {
+    display: inline-flex;
+    background: var(--card-bg);
+    padding: 1rem 2.5rem;
+    border-radius: 999px;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+.social-btn:hover {
+    background: var(--text-primary);
+    color: var(--bg-color);
+}
+
+/* Footer */
+footer { text-align: center; padding: 4rem 0; border-top: 1px solid var(--card-border); font-size: 0.9rem; color: var(--text-secondary); }
+
+/* --- 4. Entrance Animations --- */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+.fade-in { animation: fadeIn 1.2s ease forwards; }
+.slide-up { opacity: 0; animation: slideUp 1s ease 0.2s forwards; }
+.slide-up-delayed { opacity: 0; animation: slideUp 1s ease 0.4s forwards; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .hero h1 { font-size: 2.8rem; }
+    .container { padding-top: 7rem; }
+}

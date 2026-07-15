@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Hadi | Front-End Architect</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-container">
+        <div class="mesh-gradient"></div>
+        <div class="particle-system">
+            <div class="particle"></div><div class="particle"></div>
+            <div class="particle"></div><div class="particle"></div>
+            <div class="particle"></div><div class="particle"></div>
+            <div class="particle"></div><div class="particle"></div>
+            <div class="particle"></div><div class="particle"></div>
+            <div class="particle"></div><div class="particle"></div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <span class="nav-brand">AH<span class="dot">.</span></span>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#skills">Tech</a></li>
+            </ul>
+            <a href="#connect" class="nav-cta">Connect</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header id="home" class="hero fade-in">
+            <div class="badge">Dynamic Background Enabled</div>
+            <h1>I Architect <span class="highlight">Web Experiences</span></h1>
+            <h2>Abdul Hadi // Front-End Developer</h2>
+            <p>Developing responsive, interaction-driven interfaces with pixel-perfect precision and high-performance animation.</p>
+        </header>
+
+        <main>
+            <section id="projects" class="projects-section slide-up">
+                <div class="section-header">
+                    <span class="section-tag">Showcase</span>
+                    <h3>Core Development Work</h3>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="projects-grid">
+                    <a href="https://it-department-prac.netlify.app" target="_blank" class="project-card dynamic-glow">
+                        <div class="card-content">
+                            <span class="project-num">01</span>
+                            <h4>IT Department Prac</h4>
+                            <p>High-fidelity platform practice built for enterprise IT structure simulation.</p>
+                            <span class="view-link">Visit Netlify &rarr;</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://american-culture-prac.netlify.app" target="_blank" class="project-card dynamic-glow">
+                        <div class="card-content">
+                            <span class="project-num">02</span>
+                            <h4>American Culture Prac</h4>
+                            <p>A structured simulation focusing on modern cultural layouts and design systems.</p>
+                            <span class="view-link">Visit Netlify &rarr;</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://vidtube3.netlify.app" target="_blank" class="project-card dynamic-glow">
+                        <div class="card-content">
+                            <span class="project-num">03</span>
+                            <h4>VidTube 3</h4>
+                            <p>Conceptual interface recreation of a modern video streaming application.</p>
+                            <span class="view-link">Visit Netlify &rarr;</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://zone-library.netlify.app" target="_blank" class="project-card dynamic-glow">
+                        <div class="card-content">
+                            <span class="project-num">04</span>
+                            <h4>Zone Library</h4>
+                            <p>A streamlined interface for cataloging, searching, and managing digital assets.</p>
+                            <span class="view-link">Visit Netlify &rarr;</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://paralaks.netlify.app" target="_blank" class="project-card dynamic-glow">
+                        <div class="card-content">
+                            <span class="project-num">05</span>
+                            <h4>Paralaks</h4>
+                            <p>Advanced experimental implementation of CSS parallax scrolling and interactions.</p>
+                            <span class="view-link">Visit Netlify &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section id="skills" class="skills-section slide-up-delayed">
+                <div class="section-header">
+                    <span class="section-tag">Capabilities</span>
+                    <h3>Technical Stack</h3>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="skills-container">
+                    <div class="skill-category dynamic-glow">
+                        <h5>Engineering Core</h5>
+                        <div class="skills-grid">
+                            <span class="skill-tag">JavaScript (ES6+)</span>
+                            <span class="skill-tag">HTML5 & CSS3</span>
+                            <span class="skill-tag">Front-End Development</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category dynamic-glow">
+                        <h5>Performance & Speed</h5>
+                        <div class="skills-grid">
+                            <span class="skill-tag">Problem-Solving</span>
+                            <a href="https://monkeytype.com/profile/AbdulHadi12" target="_blank" class="skill-tag monkeytype-link">
+                                Typed Fast (Monkeytype Profile)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="connect" class="links-section slide-up-delayed">
+                <div class="section-header">
+                    <span class="section-tag">Contact</span>
+                    <h3>Let's Collaborate</h3>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com/AbdulHadi-devv" class="social-btn dynamic-glow" target="_blank">
+                        GitHub Profile
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Abdul Hadi. Built with modern motion.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('mousemove', e => {
+            const glowElements = document.querySelectorAll('.dynamic-glow');
+            glowElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                el.style.setProperty('--mouse-x', `${x}px`);
+                el.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+</html>
