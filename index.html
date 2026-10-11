@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdul Hadi | Front-End Architect</title>
+    <title>Abdul Hadi | Full-Stack Developer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2338bdf8'/%3E%3Cstop offset='100%25' style='stop-color:%23a78bfa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%23030712'/%3E%3Ctext x='50' y='68' font-family='Arial,sans-serif' font-weight='800' font-size='52' text-anchor='middle' fill='url(%23g)'%3EAH%3C/text%3E%3C/svg%3E">
 </head>
 <body>
+    <!-- ============================================
+         DECORATIVE BACKGROUND LAYERS
+         ============================================ -->
     <div class="bg-container">
         <div class="mesh-gradient"></div>
+        <div class="mesh-gradient mesh-gradient-2"></div>
+        <div class="aurora aurora-1"></div>
+        <div class="aurora aurora-2"></div>
+        <div class="aurora aurora-3"></div>
+        <div class="grid-overlay"></div>
         <div class="particle-system">
             <div class="particle"></div><div class="particle"></div>
             <div class="particle"></div><div class="particle"></div>
@@ -19,7 +27,13 @@
             <div class="particle"></div><div class="particle"></div>
             <div class="particle"></div><div class="particle"></div>
             <div class="particle"></div><div class="particle"></div>
+            <div class="particle"></div><div class="particle"></div>
+            <div class="particle"></div><div class="particle"></div>
         </div>
+        <!-- Floating orbs for decoration -->
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
     </div>
 
     <nav class="navbar">
@@ -29,6 +43,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Work</a></li>
                 <li><a href="#skills">Tech</a></li>
+                <li><a href="#connect">Contact</a></li>
             </ul>
             <a href="#connect" class="nav-cta">Connect</a>
         </div>
@@ -36,88 +51,63 @@
 
     <div class="container">
         <header id="home" class="hero fade-in">
-            <h1>I Architect <span class="highlight">Web Experiences</span></h1>
-            <h2>Abdul Hadi // Front-End Developer</h2>
-            <p>Developing responsive, interaction-driven interfaces with pixel-perfect precision and high-performance animation.</p>
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for new opportunities
+            </div>
+            <h1>I Build <span class="highlight">Digital Products</span> That Solve Real Problems</h1>
+            <h2>Abdul Hadi // Full-Stack Developer</h2>
+            <p>I turn complex business problems into clean, scalable, and user-friendly web applications. From database design to pixel-perfect interfaces — I own the entire stack, shipping products that customers actually want to use.</p>
+            <div class="hero-cta-row">
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="mailto:1010abdul9090@gmail.com" class="btn-secondary">Hire Me &rarr;</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num">10+</span>
+                    <span class="stat-label">Projects Shipped</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">Client Focused</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">Full</span>
+                    <span class="stat-label">Stack Ownership</span>
+                </div>
+            </div>
         </header>
 
         <main>
             <section id="projects" class="projects-section slide-up">
-                <div class="section-header">
-                    <span class="section-tag">Showcase</span>
-                    <h3>Core Development Work</h3>
-                    <div class="divider"></div>
+                <div class="section-header left-aligned">
+                    <span class="section-tag">Featured Work</span>
+                    <h3 class="big-heading">Nexus</h3>
+                    <div class="divider left-divider"></div>
                 </div>
                 
-                <div class="projects-grid">
+                <div class="projects-grid single-project">
                     <a href="https://nexus-hadi.netlify.app/" target="_blank" class="project-card featured-card dynamic-glow">
                         <div class="card-content">
-                            <span class="project-num">★ Featured</span>
+                            <div class="featured-badge">
+                                <span>★</span> FLAGSHIP PROJECT
+                            </div>
                             <h4>Nexus</h4>
-                            <p>AI product builder that turns a problem into a buildable plan. Features a personal knowledge base with force-directed graph, full-text search, and shareable blueprints.</p>
+                            <p class="featured-tagline">AI-powered product builder that transforms a raw problem into a fully buildable, engineering-grade plan.</p>
+                            <p>Three-stage AI pipeline (analysis → solutions → blueprint). Every blueprint is saved to a personal knowledge base alongside notes, bookmarks, and resources — complete with force-directed graph visualization, full-text search, typed connections, and shareable links.</p>
                             <div class="tech-tags">
-                                <span>React</span>
-                                <span>Node</span>
+                                <span>React 18</span>
+                                <span>Node.js</span>
+                                <span>Express</span>
                                 <span>Prisma</span>
                                 <span>PostgreSQL</span>
-                                <span>Gemini</span>
+                                <span>Gemini AI</span>
                                 <span>Groq</span>
+                                <span>vis-network</span>
                             </div>
-                            <span class="view-link">Visit Live &rarr;</span>
-                        </div>
-                    </a>
-                    
-                    <a href="https://it-department-prac.netlify.app" target="_blank" class="project-card dynamic-glow">
-                        <div class="card-content">
-                            <span class="project-num">01</span>
-                            <h4>IT Department Prac</h4>
-                            <p>High-fidelity platform practice built for enterprise IT structure simulation.</p>
-                            <span class="view-link">Visit Netlify &rarr;</span>
-                        </div>
-                    </a>
-                    
-                    <a href="https://american-culture-prac.netlify.app" target="_blank" class="project-card dynamic-glow">
-                        <div class="card-content">
-                            <span class="project-num">02</span>
-                            <h4>American Culture Prac</h4>
-                            <p>A structured simulation focusing on modern cultural layouts and design systems.</p>
-                            <span class="view-link">Visit Netlify &rarr;</span>
-                        </div>
-                    </a>
-                    
-                    <a href="https://vidtube3.netlify.app" target="_blank" class="project-card dynamic-glow">
-                        <div class="card-content">
-                            <span class="project-num">03</span>
-                            <h4>VidTube 3</h4>
-                            <p>Conceptual interface recreation of a modern video streaming application.</p>
-                            <span class="view-link">Visit Netlify &rarr;</span>
-                        </div>
-                    </a>
-                    
-                    <a href="https://zone-library.netlify.app" target="_blank" class="project-card dynamic-glow">
-                        <div class="card-content">
-                            <span class="project-num">04</span>
-                            <h4>Zone Library</h4>
-                            <p>A streamlined interface for cataloging, searching, and managing digital assets.</p>
-                            <span class="view-link">Visit Netlify &rarr;</span>
-                        </div>
-                    </a>
-                    
-                    <a href="https://paralaks.netlify.app" target="_blank" class="project-card dynamic-glow">
-                        <div class="card-content">
-                            <span class="project-num">05</span>
-                            <h4>Paralaks</h4>
-                            <p>Experimental CSS parallax scrolling and interactive scroll-driven animations.</p>
-                            <span class="view-link">Visit Netlify &rarr;</span>
-                        </div>
-                    </a>
-                    
-                    <a href="#" class="project-card dynamic-glow placeholder-card">
-                        <div class="card-content">
-                            <span class="project-num">06</span>
-                            <h4>More coming</h4>
-                            <p>New experiments and client projects in development. Stay tuned.</p>
-                            <span class="view-link">In progress &rarr;</span>
+                            <span class="view-link">Visit Live Project &rarr;</span>
                         </div>
                     </a>
                 </div>
@@ -127,6 +117,7 @@
                 <div class="section-header left-aligned">
                     <span class="section-tag">TECH ARSENAL</span>
                     <h3 class="big-heading">Skills</h3>
+                    <div class="divider left-divider"></div>
                 </div>
 
                 <div class="skills-categories">
@@ -144,39 +135,27 @@
                         </div>
                         <div class="skill-grid">
                             <div class="skill-item">
-                                <div class="skill-icon-box">
-                                    <i class="devicon-javascript-plain"></i>
-                                </div>
+                                <div class="skill-icon-box"><i class="devicon-javascript-plain"></i></div>
                                 <span class="skill-name">JavaScript</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon-box">
-                                    <i class="devicon-react-original"></i>
-                                </div>
+                                <div class="skill-icon-box"><i class="devicon-react-original"></i></div>
                                 <span class="skill-name">React</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon-box">
-                                    <i class="devicon-html5-plain"></i>
-                                </div>
+                                <div class="skill-icon-box"><i class="devicon-html5-plain"></i></div>
                                 <span class="skill-name">HTML5</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon-box">
-                                    <i class="devicon-css3-plain"></i>
-                                </div>
+                                <div class="skill-icon-box"><i class="devicon-css3-plain"></i></div>
                                 <span class="skill-name">CSS3</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon-box">
-                                    <i class="devicon-vitejs-plain"></i>
-                                </div>
+                                <div class="skill-icon-box"><i class="devicon-vitejs-plain"></i></div>
                                 <span class="skill-name">Vite</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon-box">
-                                    <i class="devicon-markdown-original"></i>
-                                </div>
+                                <div class="skill-icon-box"><i class="devicon-markdown-original"></i></div>
                                 <span class="skill-name">Markdown</span>
                             </div>
                             <div class="skill-item">
@@ -198,9 +177,7 @@
                                 <span class="skill-name">React Router</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon-box">
-                                    <i class="devicon-axios-plain"></i>
-                                </div>
+                                <div class="skill-icon-box"><i class="devicon-axios-plain"></i></div>
                                 <span class="skill-name">Axios</span>
                             </div>
                         </div>
@@ -221,27 +198,19 @@
                         </div>
                         <div class="skill-grid">
                             <div class="skill-item">
-                                <div class="skill-icon-box">
-                                    <i class="devicon-nodejs-plain"></i>
-                                </div>
+                                <div class="skill-icon-box"><i class="devicon-nodejs-plain"></i></div>
                                 <span class="skill-name">Node.js</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon-box">
-                                    <i class="devicon-express-original"></i>
-                                </div>
+                                <div class="skill-icon-box"><i class="devicon-express-original"></i></div>
                                 <span class="skill-name">Express</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon-box">
-                                    <i class="devicon-prisma-original"></i>
-                                </div>
+                                <div class="skill-icon-box"><i class="devicon-prisma-original"></i></div>
                                 <span class="skill-name">Prisma</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon-box">
-                                    <i class="devicon-postgresql-plain"></i>
-                                </div>
+                                <div class="skill-icon-box"><i class="devicon-postgresql-plain"></i></div>
                                 <span class="skill-name">PostgreSQL</span>
                             </div>
                             <div class="skill-item">
@@ -263,15 +232,11 @@
                                 <span class="skill-name">bcrypt</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon-box">
-                                    <i class="devicon-google-plain"></i>
-                                </div>
+                                <div class="skill-icon-box"><i class="devicon-google-plain"></i></div>
                                 <span class="skill-name">Gemini AI</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon-box">
-                                    <i class="devicon-googlecloud-plain"></i>
-                                </div>
+                                <div class="skill-icon-box"><i class="devicon-googlecloud-plain"></i></div>
                                 <span class="skill-name">Groq</span>
                             </div>
                             <div class="skill-item">
@@ -295,9 +260,7 @@
                         </div>
                         <div class="skill-grid">
                             <div class="skill-item">
-                                <div class="skill-icon-box">
-                                    <i class="devicon-netlify-plain"></i>
-                                </div>
+                                <div class="skill-icon-box"><i class="devicon-netlify-plain"></i></div>
                                 <span class="skill-name">Netlify</span>
                             </div>
                             <div class="skill-item">
@@ -313,9 +276,7 @@
                                 <span class="skill-name">Git / GitHub</span>
                             </div>
                             <div class="skill-item">
-                                <div class="skill-icon-box">
-                                    <i class="devicon-visualstudio-plain"></i>
-                                </div>
+                                <div class="skill-icon-box"><i class="devicon-visualstudio-plain"></i></div>
                                 <span class="skill-name">VS Code</span>
                             </div>
                             <div class="skill-item">
@@ -339,12 +300,24 @@
         <section id="connect" class="links-section">
             <div class="section-header">
                 <span class="section-tag">Contact</span>
-                <h3>Let's Collaborate</h3>
+                <h3>Let's Build Something Together</h3>
                 <div class="divider"></div>
             </div>
             
+            <p class="connect-text">Have a problem that needs solving? A product that needs shipping? I'm ready to jump in. Let's talk.</p>
+
             <div class="social-links">
+                <a href="mailto:1010abdul9090@gmail.com" class="social-btn email-btn dynamic-glow">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    1010abdul9090@gmail.com
+                </a>
                 <a href="https://github.com/AbdulHadi-devv" class="social-btn dynamic-glow" target="_blank">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
                     GitHub Profile
                 </a>
             </div>
